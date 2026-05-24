@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#262624" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="Mangaba IoT AI — colocamos IA em dispositivos IoT prontos ou desenvolvidos sob encomenda. Modelos destilados rodando local: sensores, gateways, câmeras e wearables industriais." />
+  <meta property="og:site_name" content="Mangaba IoT AI" />
+  <meta property="og:title" content="Mangaba IoT AI — IA em dispositivos IoT prontos ou sob encomenda" />
+  <meta property="og:description" content="Catálogo de dispositivos IoT com IA embarcada e fábrica de hardware sob encomenda. Modelos Mangaba destilados rodando 100% local, sem nuvem obrigatória." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mangaba IoT AI — IA em dispositivos IoT prontos ou sob encomenda" />
+  <meta name="twitter:description" content="Catálogo de dispositivos IoT com IA embarcada e fábrica de hardware sob encomenda." />
+  <title>Mangaba IoT AI — IA em dispositivos IoT prontos ou sob encomenda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tema sem flash -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('mangaba-iot-theme');
+        var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (s === 'dark' || (!s && prefers)) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="nav" role="banner">
+    <div class="nav__inner container">
+      <a class="brand" href="#top" aria-label="Mangaba IoT AI — início">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M 32 16 C 24 8, 14 11, 15 18 C 16 23, 26 23, 33 18 Z" fill="#7DA84A"/>
+          <path d="M 17 16 Q 24 16, 31 18" stroke="#5A8235" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+          <rect x="30.5" y="12" width="2.5" height="6" rx="1" fill="#5C3A24"/>
+          <circle cx="32" cy="40" r="22" fill="#DD7B4E"/>
+          <ellipse cx="32" cy="48" rx="18" ry="10" fill="#B85838" opacity="0.22"/>
+          <ellipse cx="24" cy="30" rx="6" ry="4" fill="#FFFFFF" opacity="0.24" transform="rotate(-22 24 30)"/>
+        </svg>
+        <span class="brand__wordmark">
+          <span class="brand__name">Mangaba</span>
+          <span class="brand__product">IoT AI</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#prontos">Prontos</a>
+        <a href="#encomenda">Sob encomenda</a>
+        <a href="#casos">Casos de uso</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__cta">
+        <button class="theme-toggle" type="button" aria-label="Alternar tema claro/escuro" id="themeToggle">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn--primary" href="#contato">Começar agora</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="hero__eyebrow"><span class="dot"></span> online · IA embarcada · sem dependência de nuvem</span>
+        <h1 class="fade-in">
+          IA dentro do seu dispositivo.
+          <br />
+          <span class="accent">Pronto ou sob encomenda.</span>
+        </h1>
+        <p class="hero__sub">
+          Colocamos modelos Mangaba destilados rodando local em dispositivos IoT — de sensores industriais a câmeras, gateways e wearables. Compre uma das placas do catálogo ou desenhe a sua com a nossa equipe.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary btn--lg" href="#prontos">Ver dispositivos prontos</a>
+          <a class="btn btn--ghost btn--lg" href="#encomenda">Encomendar um projeto →</a>
+        </div>
+        <p class="hero__micro">Sem assinatura mensal obrigatória. Sem dependência de nuvem. Direto no firmware.</p>
+
+        <div class="tracks">
+          <article class="track reveal">
+            <span class="track__tag">Catálogo</span>
+            <h3>Dispositivos prontos</h3>
+            <p>Placas e kits homologados, com IA pré-instalada, prontos para entrar em produção em 2 a 4 semanas.</p>
+            <ul>
+              <li>Estoque local, NF-e e suporte em pt-BR</li>
+              <li>Modelos destilados pré-carregados</li>
+              <li>SDK, OTA e dashboard inclusos</li>
+            </ul>
+            <a class="btn btn--link" href="#prontos">Ver catálogo →</a>
+          </article>
+
+          <article class="track reveal">
+            <span class="track__tag">Engenharia</span>
+            <h3>Sob encomenda</h3>
+            <p>Da ideia ao produto: definimos SoC, NPU, sensores, certificação e firmware sob medida para o seu caso.</p>
+            <ul>
+              <li>Hardware customizado (PCB, gabinete, antenas)</li>
+              <li>Treino e quantização de modelo por cliente</li>
+              <li>Anatel, INMETRO e IPC Class 2/3</li>
+            </ul>
+            <a class="btn btn--link" href="#encomenda">Falar com engenharia →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODELS BAR -->
+    <section class="models" aria-label="Modelos suportados">
+      <div class="container">
+        <p class="models__label">Modelos que rodam local nos nossos dispositivos</p>
+        <div class="models__row">
+          <span class="model-chip"><span class="dot-sm"></span> Llama 3.2 1B</span>
+          <span class="model-chip"><span class="dot-sm"></span> Llama 3.2 3B</span>
+          <span class="model-chip"><span class="dot-sm"></span> Phi-3.5 Mini</span>
+          <span class="model-chip"><span class="dot-sm"></span> Qwen 2.5</span>
+          <span class="model-chip"><span class="dot-sm"></span> Gemma 2</span>
+          <span class="model-chip"><span class="dot-sm"></span> TinyLlama</span>
+          <span class="model-chip"><span class="dot-sm"></span> Whisper distil</span>
+          <span class="model-chip"><span class="dot-sm"></span> DistilBERT</span>
+          <span class="model-chip"><span class="dot-sm"></span> YOLOv8n</span>
+          <span class="model-chip"><span class="dot-sm"></span> MobileNetV3</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE EDGE -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Por que IA na borda</p>
+          <h2 class="section__title">A inteligência fica onde o dado nasce.</h2>
+          <p class="section__lede">Latência de milissegundos, dado sensível que não sobe para nuvem, e custo previsível — sem fatura de inferência crescendo todo mês.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Resposta em &lt;100 ms</h3>
+            <p>Inferência local em NPU dedicada. Sem round-trip, sem fila de API, sem oscilação de internet.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Dado nunca sai do dispositivo</h3>
+            <p>LGPD-friendly por padrão. Áudio, vídeo e telemetria são processados no chip — só o resultado, se quiser, sobe.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Custo fixo de hardware</h3>
+            <p>Você compra o dispositivo uma vez. Sem token, sem por-requisição, sem surpresa no fim do mês.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5C2 8.4 5.4 5 9.5 5h5C18.6 5 22 8.4 22 12.5S18.6 20 14.5 20h-5C5.4 20 2 16.6 2 12.5z"/><circle cx="9.5" cy="12.5" r="2.5"/></svg>
+            </div>
+            <h3>Funciona offline</h3>
+            <p>Fazenda no interior, fábrica em subsolo, navio no Atlântico. Não cai se a internet cair.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <h3>Modelos próprios destilados</h3>
+            <p>Variantes Mangaba enxutas, especializadas em pt-BR e no seu domínio, com a precisão dos modelos grandes.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Conformidade IPC</h3>
+            <p>Hardware projetado e fabricado seguindo IPC Class 2 (ou Class 3 para missão crítica). Documentação completa por lote.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRONTOS -->
+    <section class="section section--alt" id="prontos">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Dispositivos prontos</p>
+          <h2 class="section__title">Catálogo homologado, IA pré-instalada.</h2>
+          <p class="section__lede">Seis famílias de dispositivos, em estoque, com firmware Mangaba já carregado. Você abre a caixa, conecta e usa.</p>
+        </header>
+
+        <div class="devices">
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Sense S1</span>
+              <span class="device__badge device__badge--new">Novo</span>
+            </div>
+            <p class="device__desc">Sensor multi-canal (temperatura, vibração, corrente) com inferência de anomalia em tempo real.</p>
+            <div class="device__meta">
+              <span>ESP32-S3</span><span>·</span>
+              <span>2 TOPS</span><span>·</span>
+              <span>LoRa + WiFi</span>
+            </div>
+          </article>
+
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Gateway G4</span>
+              <span class="device__badge">Disponível</span>
+            </div>
+            <p class="device__desc">Gateway industrial que recebe dezenas de sensores e roda o modelo de decisão localmente.</p>
+            <div class="device__meta">
+              <span>RK3566</span><span>·</span>
+              <span>6 TOPS</span><span>·</span>
+              <span>4 LAN + 4G</span>
+            </div>
+          </article>
+
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Vision V2</span>
+              <span class="device__badge device__badge--new">Novo</span>
+            </div>
+            <p class="device__desc">Câmera IP com YOLOv8n e MobileNet rodando on-device. EPI, contagem e segurança perimetral.</p>
+            <div class="device__meta">
+              <span>RV1106</span><span>·</span>
+              <span>1 TOPS</span><span>·</span>
+              <span>1080p · PoE</span>
+            </div>
+          </article>
+
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Voice W1</span>
+              <span class="device__badge">Disponível</span>
+            </div>
+            <p class="device__desc">Wearable / badge de voz com Whisper destilado para transcrição offline em pt-BR.</p>
+            <div class="device__meta">
+              <span>RK3566</span><span>·</span>
+              <span>6 TOPS</span><span>·</span>
+              <span>BT + WiFi</span>
+            </div>
+          </article>
+
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Edge E8</span>
+              <span class="device__badge">Disponível</span>
+            </div>
+            <p class="device__desc">Mini-PC para chão de fábrica, roda LLMs destilados (Llama 3.2 3B, Phi-3.5) e agentes locais.</p>
+            <div class="device__meta">
+              <span>RK3588S2</span><span>·</span>
+              <span>19 TOPS</span><span>·</span>
+              <span>16 GB LPDDR5</span>
+            </div>
+          </article>
+
+          <article class="device reveal">
+            <div class="device__head">
+              <span class="device__name">Mangaba Agro A1</span>
+              <span class="device__badge">Pré-venda</span>
+            </div>
+            <p class="device__desc">Estação de campo solar com classificação de pragas e doenças por imagem.</p>
+            <div class="device__meta">
+              <span>RV1126</span><span>·</span>
+              <span>2 TOPS</span><span>·</span>
+              <span>LoRa + Solar</span>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top: 32px;">
+          <a class="btn btn--orange btn--lg" href="#contato">Pedir orçamento do catálogo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOB ENCOMENDA -->
+    <section class="section" id="encomenda">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Sob encomenda</p>
+          <h2 class="section__title">Seu dispositivo, seu modelo, sua linha de produção.</h2>
+          <p class="section__lede">Do brief ao primeiro lote em ~16 semanas. Engenharia eletrônica, firmware, treino de modelo e certificação — tudo dentro de casa.</p>
+        </header>
+
+        <div class="steps">
+          <article class="step reveal">
+            <div class="step__num">01</div>
+            <h4>Discovery</h4>
+            <p>2 semanas. Mapeamos casos de uso, restrições de ambiente, volume e janela de latência.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step__num">02</div>
+            <h4>Protótipo</h4>
+            <p>4–6 semanas. Placa EVT em 85 × 55 mm com SoC e NPU dimensionados, firmware mínimo e PoC do modelo.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step__num">03</div>
+            <h4>Piloto</h4>
+            <p>4 semanas. Lote DVT 10–50 unidades, integração com seus sistemas, métrica de campo.</p>
+          </article>
+          <article class="step reveal">
+            <div class="step__num">04</div>
+            <h4>Produção</h4>
+            <p>4+ semanas. PVT, certificação Anatel/INMETRO, fabricação em escala e suporte de OTA.</p>
+          </article>
+        </div>
+
+        <div style="margin-top: 48px;">
+          <div class="compare-wrap">
+            <table class="compare">
+              <thead>
+                <tr>
+                  <th>Capacidade</th>
+                  <th>Pronto</th>
+                  <th>Sob encomenda</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Time-to-market</td>
+                  <td class="check">2–4 semanas</td>
+                  <td class="star">12–20 semanas</td>
+                </tr>
+                <tr>
+                  <td>MOQ (volume mínimo)</td>
+                  <td class="check">1 unidade</td>
+                  <td class="dash">100 unidades</td>
+                </tr>
+                <tr>
+                  <td>Modelo customizado por cliente</td>
+                  <td class="dash">Catálogo padrão</td>
+                  <td class="check">Treino e quantização sob medida</td>
+                </tr>
+                <tr>
+                  <td>Sensores e periféricos próprios</td>
+                  <td class="dash">Configuração fixa</td>
+                  <td class="check">Desenho livre</td>
+                </tr>
+                <tr>
+                  <td>Certificação (Anatel, INMETRO)</td>
+                  <td class="check">Inclusa</td>
+                  <td class="check">Acompanhada pela engenharia</td>
+                </tr>
+                <tr>
+                  <td>Branding (cor, logo, gabinete)</td>
+                  <td class="dash">Selo Mangaba</td>
+                  <td class="check">White-label completo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS DE USO -->
+    <section class="section section--alt" id="casos">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Casos de uso</p>
+          <h2 class="section__title">Onde IA na borda já está pagando a conta.</h2>
+        </header>
+
+        <div class="uses">
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V11h6v10"/></svg>
+            </div>
+            <div>
+              <h4>Indústria 4.0</h4>
+              <p>Manutenção preditiva por vibração e corrente, OEE em tempo real, detecção de defeito por visão.</p>
+            </div>
+          </article>
+
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
+            </div>
+            <div>
+              <h4>Agronegócio</h4>
+              <p>Identificação de pragas e doenças no campo, contagem de gado, monitoramento de irrigação offline.</p>
+            </div>
+          </article>
+
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+            </div>
+            <div>
+              <h4>Varejo</h4>
+              <p>Contagem de fluxo, mapa de calor, prevenção de perdas e PDV inteligente sem expor imagem de cliente.</p>
+            </div>
+          </article>
+
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <h4>Saúde</h4>
+              <p>Triagem por imagem, transcrição de prontuário em pt-BR e biossinais — tudo dentro da clínica, fora da nuvem.</p>
+            </div>
+          </article>
+
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h4>Logística e frota</h4>
+              <p>Comportamento de motorista, leitura de placa e lacre, e telemetria de carga sensível sem conectividade contínua.</p>
+            </div>
+          </article>
+
+          <article class="use reveal">
+            <div class="use__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-12a8 8 0 0 1 16 0c0 7.5-8 12-8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Cidades e segurança</h4>
+              <p>Câmeras de via, contagem de tráfego, EPI em canteiro de obras — processadas localmente, em conformidade com LGPD.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__eyebrow">Perguntas frequentes</p>
+          <h2 class="section__title">O que costumam perguntar antes de fechar.</h2>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary>Qual a diferença entre comprar pronto e encomendar?</summary>
+            <div>Os dispositivos prontos são SKUs do nosso catálogo, com firmware genérico e MOQ de 1 unidade — chegam em 2 a 4 semanas. O sob encomenda envolve engenharia dedicada: PCB próprio, modelo treinado no seu domínio, gabinete e certificação personalizados, com MOQ a partir de 100 unidades e ciclo de 12 a 20 semanas.</div>
+          </details>
+          <details>
+            <summary>Os dispositivos funcionam sem internet?</summary>
+            <div>Sim. Toda inferência roda local no SoC/NPU. A internet só é usada para atualização OTA, sincronização opcional de telemetria e dashboards remotos — nada disso é pré-requisito para o dispositivo operar.</div>
+          </details>
+          <details>
+            <summary>Que modelos rodam de verdade nesse hardware?</summary>
+            <div>Llama 3.2 (1B e 3B), Phi-3.5 Mini, Qwen 2.5, Gemma 2, TinyLlama, Whisper distilled, DistilBERT, MobileNet, YOLOv8n — tudo quantizado (Q4_K_M, INT8) e medido. Os números completos de tok/s e TTFT por placa estão na ficha técnica.</div>
+          </details>
+          <details>
+            <summary>Como funciona a homologação Anatel e INMETRO?</summary>
+            <div>Os dispositivos prontos já saem homologados. Em projetos sob encomenda, a engenharia da Mangaba conduz a homologação junto a laboratório credenciado (Cetuc, NCC, etc.) como parte do escopo — o cronograma típico inclui 6 a 10 semanas de certificação após a PVT.</div>
+          </details>
+          <details>
+            <summary>Vocês fornecem SDK e código-fonte?</summary>
+            <div>Sim — SDK em Python e C, exemplos prontos, documentação em pt-BR e atualização OTA via dashboard. O BSP é entregue sob NDA aos clientes corporativos.</div>
+          </details>
+          <details>
+            <summary>Como é o suporte pós-venda?</summary>
+            <div>Suporte em pt-BR por e-mail, ticket e WhatsApp em horário comercial. Planos Enterprise incluem SLA, on-call e visita técnica. Garantia de 12 meses no hardware, com peças de reposição em estoque nacional.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container" id="contato">
+      <div class="cta-final">
+        <h2>Vamos colocar IA no seu dispositivo.</h2>
+        <p>Catálogo em estoque ou projeto novo — em uma conversa de 30 minutos a gente já consegue dizer o caminho mais curto.</p>
+        <div class="hero__ctas" style="margin-bottom:0;">
+          <a class="btn btn--primary btn--lg" href="mailto:iot@mangaba.ai?subject=Quero%20colocar%20IA%20em%20um%20dispositivo">Falar com a gente</a>
+          <a class="btn btn--ghost btn--lg" href="https://wa.me/?text=Olá%20Mangaba%20IoT%2C%20quero%20conversar%20sobre%20um%20projeto.">WhatsApp comercial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M 32 16 C 24 8, 14 11, 15 18 C 16 23, 26 23, 33 18 Z" fill="#7DA84A"/>
+            <rect x="30.5" y="12" width="2.5" height="6" rx="1" fill="#5C3A24"/>
+            <circle cx="32" cy="40" r="22" fill="#DD7B4E"/>
+            <ellipse cx="24" cy="30" rx="6" ry="4" fill="#FFFFFF" opacity="0.24" transform="rotate(-22 24 30)"/>
+          </svg>
+          <span class="brand__wordmark">
+            <span class="brand__name">Mangaba</span>
+            <span class="brand__product">IoT AI</span>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Rodapé">
+          <a href="#prontos">Catálogo</a>
+          <a href="#encomenda">Engenharia</a>
+          <a href="#casos">Casos</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:iot@mangaba.ai">iot@mangaba.ai</a>
+        </nav>
+      </div>
+
+      <p class="footer__legal">
+        © 2026 Mangaba. Mangaba IoT AI é parte da família Mangaba (mangaba.ai, mangaba-edge-ai.online, mangaba-voice.tech).
+        Rockchip, Hailo, Meta, Microsoft, Google e os nomes dos modelos são marcas de seus respectivos donos.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Folha -->
+  <path d="M 32 16 C 24 8, 14 11, 15 18 C 16 23, 26 23, 33 18 Z" fill="#7DA84A"/>
+  <!-- Nervura central da folha -->
+  <path d="M 17 16 Q 24 16, 31 18" stroke="#5A8235" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <!-- Pedúnculo / cabinho -->
+  <rect x="30.5" y="12" width="2.5" height="6" rx="1" fill="#5C3A24"/>
+  <!-- Fruto -->
+  <circle cx="32" cy="40" r="22" fill="#DD7B4E"/>
+  <!-- Sombra interna inferior -->
+  <ellipse cx="32" cy="48" rx="18" ry="10" fill="#B85838" opacity="0.22"/>
+  <!-- Brilho/highlight superior esquerdo -->
+  <ellipse cx="24" cy="30" rx="6" ry="4" fill="#FFFFFF" opacity="0.24" transform="rotate(-22 24 30)"/>
+</svg>
