@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF6EC" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#221F1D" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="mangaba.ai — identidade visual. Sistema de design da família Mangaba: paleta warm-cream, terracota brasileira, tipografia Open Sans e tropical minimalism." />
+  <title>mangaba.ai · identidade visual</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="brand.css" />
+
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('mangaba-iot-theme');
+        var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (s === 'dark' || (!s && prefers)) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body class="brand-page" id="top">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- Top minimal nav -->
+  <header class="brand-nav">
+    <div class="container brand-nav__inner">
+      <a class="brand" href="index.html" aria-label="mangaba.iot — início">
+        <svg class="brand__logo" width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <radialGradient id="bnMango" cx="38%" cy="32%" r="78%">
+              <stop offset="0%" stop-color="#FFE38A"/>
+              <stop offset="38%" stop-color="#F8B765"/>
+              <stop offset="72%" stop-color="#E08846"/>
+              <stop offset="100%" stop-color="#9E4A1F"/>
+            </radialGradient>
+            <linearGradient id="bnLeaf" x1="20%" y1="10%" x2="90%" y2="90%">
+              <stop offset="0%" stop-color="#7DA84A"/>
+              <stop offset="100%" stop-color="#3F6720"/>
+            </linearGradient>
+          </defs>
+          <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#bnLeaf)"/>
+          <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#bnMango)"/>
+          <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+        </svg>
+        <span class="brand__wordmark">
+          <span class="brand__name">mangaba</span><span class="brand__dot">.</span><span class="brand__suffix">ai</span>
+        </span>
+      </a>
+
+      <a class="brand-nav__back" href="index.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        Voltar para o site
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================================================ -->
+    <!-- HERO SHOWCASE — 3 cards lado a lado (réplica do guideline)   -->
+    <!-- ============================================================ -->
+    <section class="showcase">
+      <div class="showcase__stage">
+        <div class="showcase__grid">
+
+          <!-- Card 1: Tipografia + Cores -->
+          <article class="sc-card sc-card--specs">
+            <div class="sc-tags">
+              <span class="sc-tag">Tipografia</span>
+              <span class="sc-tag">Cores</span>
+            </div>
+            <div class="sc-display">Open Sans</div>
+            <div class="sc-sub">Geometria suavizada</div>
+            <p class="sc-body">Traços limpos com curvas humanistas que evitam a frieza das fontes puramente geométricas.</p>
+            <div class="sc-palette" aria-hidden="true">
+              <span class="pl-green"></span>
+              <span class="pl-orange"></span>
+              <span class="pl-amber"></span>
+              <span class="pl-yellow"></span>
+            </div>
+          </article>
+
+          <!-- Card 2: Logo gigante -->
+          <article class="sc-card sc-card--logo" aria-label="mangaba.ai logo">
+            <div class="sc-logo-lockup">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <defs>
+                  <radialGradient id="bigMango" cx="38%" cy="32%" r="78%">
+                    <stop offset="0%" stop-color="#FFE38A"/>
+                    <stop offset="38%" stop-color="#F8B765"/>
+                    <stop offset="72%" stop-color="#E08846"/>
+                    <stop offset="100%" stop-color="#9E4A1F"/>
+                  </radialGradient>
+                  <linearGradient id="bigLeaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                    <stop offset="0%" stop-color="#7DA84A"/>
+                    <stop offset="100%" stop-color="#3F6720"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#bigLeaf)"/>
+                <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#bigMango)"/>
+                <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+              </svg>
+              <span class="sc-logo-wordmark">mangaba<span class="dot">.</span><span class="suf">ai</span></span>
+            </div>
+          </article>
+
+          <!-- Card 3: Mockup de produto -->
+          <article class="sc-card sc-card--product">
+            <span class="sc-brand-mini">
+              <svg width="18" height="18" viewBox="0 0 64 64" aria-hidden="true">
+                <defs>
+                  <radialGradient id="miniMango" cx="38%" cy="32%" r="78%">
+                    <stop offset="0%" stop-color="#FFE38A"/>
+                    <stop offset="38%" stop-color="#F8B765"/>
+                    <stop offset="72%" stop-color="#E08846"/>
+                    <stop offset="100%" stop-color="#9E4A1F"/>
+                  </radialGradient>
+                  <linearGradient id="miniLeaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                    <stop offset="0%" stop-color="#7DA84A"/>
+                    <stop offset="100%" stop-color="#3F6720"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#miniLeaf)"/>
+                <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#miniMango)"/>
+              </svg>
+              <span>mangaba<span class="dot">.</span><span class="suf">ai</span></span>
+            </span>
+
+            <div class="sc-portrait">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80"
+                   alt="Profissional usando a plataforma mangaba.ai" loading="eager" />
+            </div>
+
+            <span class="sc-pill sc-pill--p1">
+              <span class="sc-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg>
+              </span>
+              Consensual
+            </span>
+            <span class="sc-pill sc-pill--p2">
+              <span class="sc-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="21"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="18" y1="3" x2="18" y2="21"/></svg>
+              </span>
+              Parallel
+            </span>
+            <span class="sc-pill sc-pill--p3">
+              <span class="sc-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </span>
+              Sequential
+            </span>
+            <span class="sc-pill sc-pill--p4">
+              <span class="sc-pill__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-5 6M12 11l5 6"/></svg>
+              </span>
+              Hierarchical
+            </span>
+
+            <div class="sc-headline-block">
+              <h2 class="sc-headline">Transforme ideias em fluxos <span class="accent">inteligentes</span></h2>
+              <p class="sc-headline-sub">Um framework brasileiro para criar agentes inteligentes, automatizar fluxos e conectar IA a processos reais.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ESSÊNCIA                                                     -->
+    <!-- ============================================================ -->
+    <section class="brand-section">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Essência</p>
+          <h2 class="brand-section__title">Tropical minimalism para a IA brasileira.</h2>
+          <p class="brand-section__lede">Tecnologia centrada no humano com sotaque brasileiro. Calor da fruta, frieza da máquina — equilibrados em uma estética orgânica e futurista.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7zM9 22h6"/></svg>
+            </div>
+            <h3>Centrado no humano</h3>
+            <p>Tipografia humanista, formas orgânicas, fala em primeira pessoa. A IA assiste — não se sobrepõe.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 7 4 11 4 15a8 8 0 0 0 16 0c0-4-3-8-8-13z"/></svg>
+            </div>
+            <h3>Origem brasileira</h3>
+            <p>Cor de fruta do Cerrado, calor de terra batida, pt-BR direto. Nada de "tech bro" gringo.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <h3>SaaS minimalista</h3>
+            <p>Layouts editoriais, cards arredondados, sombras suaves. Espaço pra respirar — sem ruído.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PALETA                                                       -->
+    <!-- ============================================================ -->
+    <section class="brand-section brand-section--alt" id="cores">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Paleta</p>
+          <h2 class="brand-section__title">Cores quentes. Sem azul frio.</h2>
+          <p class="brand-section__lede">Sete tokens cobrem 100% da identidade. A laranja é a voz; o amarelo e o âmbar são o calor; o verde é a folha; os cremes são a respiração; o charcoal é a ancoragem.</p>
+        </header>
+
+        <div class="swatches">
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#D97757"></div>
+            <div class="swatch__name">Mangaba Orange</div>
+            <div class="swatch__hex">#D97757 · primary</div>
+            <p class="swatch__use">CTAs, destaques, links, ícones. A voz da marca.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:linear-gradient(135deg,#FFE38A,#F8B765,#E08846,#9E4A1F)"></div>
+            <div class="swatch__name">Mango Gradient</div>
+            <div class="swatch__hex">#FFE38A → #9E4A1F</div>
+            <p class="swatch__use">Logo, steps, badges, glows. O calor literal da fruta.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#F5A55A"></div>
+            <div class="swatch__name">Amber</div>
+            <div class="swatch__hex">#F5A55A · accent</div>
+            <p class="swatch__use">Glows, hover suaves, overlay de calor.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#FFD66B"></div>
+            <div class="swatch__name">Mango Yellow</div>
+            <div class="swatch__hex">#FFD66B · accent</div>
+            <p class="swatch__use">Topo do gradient, ilustração, ícone secundário.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#7DA84A"></div>
+            <div class="swatch__name">Leaf Green</div>
+            <div class="swatch__hex">#7DA84A · accent</div>
+            <p class="swatch__use">Folha do logo, status "online", confirmações.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#FAF6EC;border-color:#E8E2D5"></div>
+            <div class="swatch__name">Warm Cream</div>
+            <div class="swatch__hex">#FAF6EC · background</div>
+            <p class="swatch__use">Fundo principal. Quente, respirável, brasileiro.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#1F1E1D"></div>
+            <div class="swatch__name">Near Black</div>
+            <div class="swatch__hex">#1F1E1D · foreground</div>
+            <p class="swatch__use">Texto principal, CTA escuro, modo light.</p>
+          </div>
+          <div class="swatch">
+            <div class="swatch__chip" style="background:#221F1D"></div>
+            <div class="swatch__name">Charcoal</div>
+            <div class="swatch__hex">#221F1D · dark bg</div>
+            <p class="swatch__use">Fundo do modo dark. Quente, não puro preto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TIPOGRAFIA                                                   -->
+    <!-- ============================================================ -->
+    <section class="brand-section" id="tipografia">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Tipografia</p>
+          <h2 class="brand-section__title">Open Sans. Humanista e geométrica ao mesmo tempo.</h2>
+          <p class="brand-section__lede">Traços limpos com curvas humanistas. JetBrains Mono complementa em código, teclas e números técnicos.</p>
+        </header>
+
+        <div class="type-scale">
+          <div class="type-row">
+            <div class="type-row__label">H1 · 56/800</div>
+            <div class="type-row__sample t-h1">Coloque IA onde ela importa.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">H2 · 40/800</div>
+            <div class="type-row__sample t-h2">Modelos próprios, destilados para o Brasil.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">H3 · 28/700</div>
+            <div class="type-row__sample t-h3">Direto no navegador. Direto no dispositivo.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">H4 · 20/700</div>
+            <div class="type-row__sample t-h4">Manutenção preditiva em 84 prensas</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">Body · 15/400</div>
+            <div class="type-row__sample t-body">Mangaba é uma família brasileira de produtos de IA. Os modelos rodam local no dispositivo — sem nuvem obrigatória, sem fatura crescendo, com dados que nunca saem do hardware.</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">Small · 12.5/600</div>
+            <div class="type-row__sample t-small">SEM CARTÃO · SEM INSTALAÇÃO · SEM AMARRAÇÃO</div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__label">Mono · 13/400</div>
+            <div class="type-row__sample t-mono">llama-3.2-3b · Q4_K_M · 18 tok/s · 145 ms TTFT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- LOGO SYSTEM                                                  -->
+    <!-- ============================================================ -->
+    <section class="brand-section brand-section--alt" id="logo">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Logo system</p>
+          <h2 class="brand-section__title">Uma fruta, quatro contextos.</h2>
+          <p class="brand-section__lede">O símbolo funciona sozinho. O lockup completo é a aplicação preferida. Sufixo varia por produto: <code>.ai</code> · <code>.iot</code> · <code>.voice</code> · <code>.chat</code>.</p>
+        </header>
+
+        <div class="logo-grid">
+          <div class="logo-tile logo-tile--light">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <radialGradient id="lt1Mango" cx="38%" cy="32%" r="78%">
+                  <stop offset="0%" stop-color="#FFE38A"/>
+                  <stop offset="38%" stop-color="#F8B765"/>
+                  <stop offset="72%" stop-color="#E08846"/>
+                  <stop offset="100%" stop-color="#9E4A1F"/>
+                </radialGradient>
+                <linearGradient id="lt1Leaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                  <stop offset="0%" stop-color="#7DA84A"/>
+                  <stop offset="100%" stop-color="#3F6720"/>
+                </linearGradient>
+              </defs>
+              <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#lt1Leaf)"/>
+              <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#lt1Mango)"/>
+              <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+            </svg>
+            <span class="word">mangaba<span class="dot">.</span><span class="suf">ai</span></span>
+            <span class="logo-tile__caption">Light · padrão</span>
+          </div>
+
+          <div class="logo-tile logo-tile--dark">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <radialGradient id="lt2Mango" cx="38%" cy="32%" r="78%">
+                  <stop offset="0%" stop-color="#FFE38A"/>
+                  <stop offset="38%" stop-color="#F8B765"/>
+                  <stop offset="72%" stop-color="#E08846"/>
+                  <stop offset="100%" stop-color="#9E4A1F"/>
+                </radialGradient>
+                <linearGradient id="lt2Leaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                  <stop offset="0%" stop-color="#7DA84A"/>
+                  <stop offset="100%" stop-color="#3F6720"/>
+                </linearGradient>
+              </defs>
+              <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#lt2Leaf)"/>
+              <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#lt2Mango)"/>
+              <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+            </svg>
+            <span class="word">mangaba<span class="dot">.</span><span class="suf">ai</span></span>
+            <span class="logo-tile__caption">Dark</span>
+          </div>
+
+          <div class="logo-tile logo-tile--orange">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="rgba(255,255,255,0.55)"/>
+              <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="#FFFFFF"/>
+            </svg>
+            <span class="word">mangaba<span class="dot">.</span><span class="suf">ai</span></span>
+            <span class="logo-tile__caption">Sobre laranja</span>
+          </div>
+
+          <div class="logo-tile logo-tile--mono">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="currentColor" opacity="0.55"/>
+              <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="currentColor"/>
+            </svg>
+            <span class="word" style="color:inherit">mangaba<span class="dot" style="color:inherit">.</span><span class="suf" style="color:inherit">ai</span></span>
+            <span class="logo-tile__caption">Monocromático</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- COMPONENTES                                                  -->
+    <!-- ============================================================ -->
+    <section class="brand-section" id="componentes">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Componentes</p>
+          <h2 class="brand-section__title">Sistema curto, aplicação ampla.</h2>
+          <p class="brand-section__lede">Cinco primitivos resolvem 90% das telas: botão, pill, card, badge, input. Tudo herda dos mesmos tokens.</p>
+        </header>
+
+        <div class="components-grid">
+          <div class="comp-card">
+            <h4>Botões</h4>
+            <div class="comp-row">
+              <button class="btn btn--primary">Começar agora</button>
+              <button class="btn btn--orange">Falar com vendas</button>
+              <button class="btn btn--ghost">Saiba mais</button>
+              <a class="btn btn--link">Como funciona →</a>
+            </div>
+          </div>
+
+          <div class="comp-card">
+            <h4>Status / capability pills</h4>
+            <div class="comp-row">
+              <span class="client-pill">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+                Online
+              </span>
+              <span class="client-pill" style="color:#059669">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+                LGPD-ready
+              </span>
+              <span class="model-chip"><span class="dot-sm"></span> llama-3.2-3b</span>
+              <span class="model-chip"><span class="dot-sm"></span> whisper</span>
+            </div>
+          </div>
+
+          <div class="comp-card">
+            <h4>Stat / métrica</h4>
+            <div class="comp-row" style="gap:24px">
+              <div>
+                <div class="stats__num" style="font-size:34px">−47%</div>
+                <div class="stats__label">paradas evitadas</div>
+              </div>
+              <div>
+                <div class="stats__num" style="font-size:34px">3.200+</div>
+                <div class="stats__label">dispositivos</div>
+              </div>
+              <div>
+                <div class="stats__num" style="font-size:34px">&lt;100ms</div>
+                <div class="stats__label">latência</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp-card">
+            <h4>Badges</h4>
+            <div class="comp-row">
+              <span class="device__badge">Disponível</span>
+              <span class="device__badge device__badge--new">Novo</span>
+              <span class="track__tag">Catálogo</span>
+              <span class="case__sector" style="position:static">Indústria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- VOZ E TOM                                                    -->
+    <!-- ============================================================ -->
+    <section class="brand-section brand-section--alt" id="voz">
+      <div class="container">
+        <header class="brand-section__head">
+          <p class="brand-section__eyebrow">Voz e tom</p>
+          <h2 class="brand-section__title">Profissional, próximo, direto.</h2>
+          <p class="brand-section__lede">Português do Brasil sem jargão de Vale do Silício. Microcopy curta. Promessa que cabe na frase, não no whitepaper.</p>
+        </header>
+
+        <div class="voice-grid">
+          <div class="voice-card voice-card--do">
+            <h4>✓ Faça</h4>
+            <p>"Coloque IA onde ela importa."</p>
+            <span>Voz na primeira pessoa, direto ao benefício.</span>
+          </div>
+          <div class="voice-card voice-card--dont">
+            <h4>✗ Evite</h4>
+            <p>"Empowering enterprises with cutting-edge AI."</p>
+            <span>Inglês, abstrato, sem promessa concreta.</span>
+          </div>
+
+          <div class="voice-card voice-card--do">
+            <h4>✓ Faça</h4>
+            <p>"Sem cartão. Sem instalação. Direto no navegador."</p>
+            <span>Três frases curtas, prova social embutida.</span>
+          </div>
+          <div class="voice-card voice-card--dont">
+            <h4>✗ Evite</h4>
+            <p>"Uma solução SaaS escalável e multi-tenant…"</p>
+            <span>Jargão técnico onde a microcopy deveria estar.</span>
+          </div>
+
+          <div class="voice-card voice-card--do">
+            <h4>✓ Faça</h4>
+            <p>"Pagou em 4 meses só com as paradas evitadas."</p>
+            <span>Quote real, número específico, sem adjetivo.</span>
+          </div>
+          <div class="voice-card voice-card--dont">
+            <h4>✗ Evite</h4>
+            <p>"Revolucionário, disruptivo, game-changer."</p>
+            <span>Adjetivos vazios. Mostre o número.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__brand">
+          <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <defs>
+              <radialGradient id="ftBrMango" cx="38%" cy="32%" r="78%">
+                <stop offset="0%" stop-color="#FFE38A"/>
+                <stop offset="38%" stop-color="#F8B765"/>
+                <stop offset="72%" stop-color="#E08846"/>
+                <stop offset="100%" stop-color="#9E4A1F"/>
+              </radialGradient>
+              <linearGradient id="ftBrLeaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                <stop offset="0%" stop-color="#7DA84A"/>
+                <stop offset="100%" stop-color="#3F6720"/>
+              </linearGradient>
+            </defs>
+            <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#ftBrLeaf)"/>
+            <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#ftBrMango)"/>
+            <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+          </svg>
+          <span class="brand__wordmark">
+            <span class="brand__name">mangaba</span><span class="brand__dot">.</span><span class="brand__suffix">ai</span>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Rodapé">
+          <a href="#cores">Cores</a>
+          <a href="#tipografia">Tipografia</a>
+          <a href="#logo">Logo</a>
+          <a href="#componentes">Componentes</a>
+          <a href="#voz">Voz e tom</a>
+          <a href="index.html">Voltar ao site</a>
+        </nav>
+      </div>
+
+      <p class="footer__legal">
+        © 2026 Mangaba. Identidade visual da família Mangaba — mangaba.ai · mangaba.iot · mangaba.voice · mangaba.chat. Tropical minimalism brasileiro.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
