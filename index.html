@@ -58,8 +58,8 @@
       <nav class="nav__links" aria-label="Navegação principal">
         <a href="#prontos">Prontos</a>
         <a href="#encomenda">Sob encomenda</a>
+        <a href="#galeria">Aplicações</a>
         <a href="#casos">Casos reais</a>
-        <a href="#demo">Demo</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -90,7 +90,7 @@
             </p>
             <div class="hero__ctas">
               <a class="btn btn--primary btn--lg" href="#contato">Falar com vendas</a>
-              <a class="btn btn--ghost btn--lg" href="#demo">Ver demo (2 min) →</a>
+              <a class="btn btn--ghost btn--lg" href="#casos">Ver casos reais →</a>
             </div>
             <p class="hero__micro">Garantia 12 meses · NF-e · Suporte pt-BR · Entrega em 5 dias úteis pra estoque nacional</p>
           </div>
@@ -170,31 +170,69 @@
       </div>
     </section>
 
-    <!-- VEJA EM AÇÃO (vídeo) -->
-    <section class="section" id="demo">
+    <!-- GALERIA DE APLICAÇÕES REAIS -->
+    <section class="section" id="galeria">
       <div class="container">
         <header class="section__head">
-          <p class="section__eyebrow">Veja em ação</p>
-          <h2 class="section__title">2 minutos. Da caixa pro chão de fábrica.</h2>
-          <p class="section__lede">Demonstração do Mangaba Gateway G4 detectando uma anomalia de vibração em uma prensa hidráulica — e disparando o alerta sem internet.</p>
+          <p class="section__eyebrow">Aplicações em campo</p>
+          <h2 class="section__title">Onde o nosso hardware está ligado agora.</h2>
+          <p class="section__lede">Fotos de instalações reais (autorizadas para divulgação) — chão de fábrica, lavoura, loja, canteiro de obras e ambiente hospitalar.</p>
         </header>
 
-        <!-- Player: troque data-video-id pelo seu vídeo do YouTube real -->
-        <div class="video-wrap"
-             id="videoPlayer"
-             role="button"
-             tabindex="0"
-             aria-label="Reproduzir demonstração do Mangaba Gateway G4"
-             data-video-id="dQw4w9WgXcQ">
-          <img class="video-poster"
-               src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=1280&auto=format&fit=crop&q=80"
-               alt="Engenheiro operando o Mangaba Gateway em uma linha de produção" />
-          <div class="video-play">
-            <span class="video-play__btn" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-          </div>
-          <div class="video-meta">▶ Demo · 2:13</div>
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--wide reveal">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1200&auto=format&fit=crop&q=80"
+                 alt="Linha de prensas com sensores Mangaba Sense S1 instalados" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Indústria</span>
+              <span class="gallery__cap">Manutenção preditiva em 84 prensas — multinacional metalúrgica · ABC paulista</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&auto=format&fit=crop&q=80"
+                 alt="Estação Mangaba Agro A1 monitorando lavoura de soja" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Agro</span>
+              <span class="gallery__cap">Estação solar com identificação de pragas — Cooperativa do Oeste PR</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=900&auto=format&fit=crop&q=80"
+                 alt="Câmera Mangaba Vision V2 instalada em loja de varejo" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Varejo</span>
+              <span class="gallery__cap">Vision V2 para contagem e prevenção de perdas — rede de farmácias</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&auto=format&fit=crop&q=80"
+                 alt="Operador com Mangaba Voice W1 em canteiro de obras" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Construção</span>
+              <span class="gallery__cap">Wearable Voice W1 transcrevendo briefing offline — construtora · São Paulo</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item reveal">
+            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=900&auto=format&fit=crop&q=80"
+                 alt="Pivô central de irrigação monitorado por gateway Mangaba G4" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Agro</span>
+              <span class="gallery__cap">Gateway G4 controlando 12 pivôs de irrigação — fazenda · oeste da Bahia</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--wide reveal">
+            <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1200&auto=format&fit=crop&q=80"
+                 alt="Sala de triagem hospitalar com dispositivos Mangaba" loading="lazy" />
+            <figcaption>
+              <span class="gallery__sector">Saúde</span>
+              <span class="gallery__cap">Edge E8 + Voice W1 para triagem e prontuário em pt-BR — hospital de média complexidade · RS</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -251,7 +289,7 @@
 
           <article class="case reveal">
             <div class="case__img">
-              <img src="https://images.unsplash.com/photo-1556742400-b5b7c5121f0c?w=900&auto=format&fit=crop&q=80"
+              <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=900&auto=format&fit=crop&q=80"
                    alt="Interior de loja de varejo com câmeras de contagem" loading="lazy" />
               <span class="case__sector">Varejo</span>
             </div>
@@ -644,8 +682,8 @@
         <nav class="footer__links" aria-label="Rodapé">
           <a href="#prontos">Catálogo</a>
           <a href="#encomenda">Engenharia</a>
+          <a href="#galeria">Aplicações</a>
           <a href="#casos">Casos</a>
-          <a href="#demo">Demo</a>
           <a href="#faq">FAQ</a>
           <a href="mailto:iot@mangaba.ai">iot@mangaba.ai</a>
         </nav>
