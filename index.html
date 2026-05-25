@@ -83,68 +83,96 @@
   </header>
 
   <main id="main">
-    <!-- HERO comercial split -->
-    <section class="hero hero--split">
-      <div class="container hero__inner">
-        <div class="hero__grid">
-          <div>
-            <span class="hero__eyebrow"><span class="dot"></span> 3.200+ dispositivos no campo · 12 setores · 99,7% uptime</span>
-            <h1 class="fade-in">
-              IA dentro do seu dispositivo.
-              <br />
-              <span class="accent">Pronto ou sob encomenda.</span>
-            </h1>
-            <p class="hero__sub">
-              Colocamos modelos destilados rodando 100% local em dispositivos IoT — de sensores industriais a câmeras e gateways. Você compra do catálogo homologado ou desenvolve o seu com a nossa engenharia. Sem nuvem obrigatória. Sem fatura crescendo.
-            </p>
-            <div class="hero__ctas">
-              <a class="btn btn--primary btn--lg" href="#contato">Falar com vendas</a>
-              <a class="btn btn--ghost btn--lg" href="#casos">Ver casos reais →</a>
-            </div>
-            <p class="hero__micro">Garantia 12 meses · NF-e · Suporte pt-BR · Entrega em 5 dias úteis pra estoque nacional</p>
-          </div>
+    <!-- HERO mosaico — 3 stage cards (réplica do guideline) -->
+    <section class="hero">
+      <div class="hero__mosaic">
 
-          <div class="hero__visual" aria-hidden="true">
-            <div class="hero__visual-img">
-              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&auto=format&fit=crop&q=80"
-                   alt="Linha de produção industrial monitorada por dispositivos IoT com IA embarcada"
-                   loading="eager" decoding="async" />
-              <div class="hero__visual-card">
-                <span class="pulse"></span>
-                <div>
-                  <div class="vcard-title">Mangaba Gateway G4 · online</div>
-                  <div class="vcard-sub">47 sensores conectados · inferência local</div>
-                </div>
+        <!-- Card 1: Copy + CTAs -->
+        <article class="hero-card hero-card--copy">
+          <span class="hero__eyebrow"><span class="dot"></span> 3.200+ dispositivos · 12 setores · 99,7% uptime</span>
+          <h1 class="fade-in">
+            IA dentro do seu dispositivo.
+            <span class="accent">Pronto ou sob encomenda.</span>
+          </h1>
+          <p class="hero__sub">
+            Modelos destilados rodando 100% local em dispositivos IoT — sensores, câmeras e gateways. Compre do catálogo homologado ou desenvolva o seu com a nossa engenharia.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg" href="#contato">Falar com vendas</a>
+            <a class="btn btn--ghost btn--lg" href="#casos">Casos reais →</a>
+          </div>
+          <p class="hero__micro">Garantia 12 meses · NF-e · Suporte pt-BR · Entrega em 5 dias úteis</p>
+        </article>
+
+        <!-- Card 2: Brand visual (logo gigante) -->
+        <article class="hero-card hero-card--brand" aria-label="mangaba.iot logo">
+          <div class="hero-brand-lockup">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <radialGradient id="heroBigMango" cx="38%" cy="32%" r="78%">
+                  <stop offset="0%" stop-color="#FFE38A"/>
+                  <stop offset="38%" stop-color="#F8B765"/>
+                  <stop offset="72%" stop-color="#E08846"/>
+                  <stop offset="100%" stop-color="#9E4A1F"/>
+                </radialGradient>
+                <linearGradient id="heroBigLeaf" x1="20%" y1="10%" x2="90%" y2="90%">
+                  <stop offset="0%" stop-color="#7DA84A"/>
+                  <stop offset="100%" stop-color="#3F6720"/>
+                </linearGradient>
+              </defs>
+              <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#heroBigLeaf)"/>
+              <path d="M 32 14 C 19 14, 11 25, 11 38 C 11 52, 20 60, 32 60 C 44 60, 53 52, 53 38 C 53 25, 45 14, 32 14 Z" fill="url(#heroBigMango)"/>
+              <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
+            </svg>
+            <span class="hero-brand-wordmark">mangaba<span class="dot">.</span><span class="suf">iot</span></span>
+          </div>
+          <p class="hero-brand-tagline">IA brasileira na borda — direto no firmware.</p>
+        </article>
+
+        <!-- Card 3: Produto + pills flutuantes -->
+        <article class="hero-card hero-card--product">
+          <div class="hero-product-img">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&auto=format&fit=crop&q=80"
+                 alt="Dispositivo Mangaba IoT em operação numa linha de produção"
+                 loading="eager" decoding="async" />
+            <div class="hero-status-card">
+              <span class="pulse"></span>
+              <div>
+                <div class="st-title">Gateway G4 · online</div>
+                <div class="st-sub">47 sensores · inferência local</div>
               </div>
             </div>
-
-            <!-- Pills flutuantes (capacidades-chave) -->
-            <span class="float-pill float-pill--tl">
-              <span class="float-pill__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </span>
-              &lt;100 ms
-            </span>
-            <span class="float-pill float-pill--tr">
-              <span class="float-pill__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              </span>
-              Offline
-            </span>
-            <span class="float-pill float-pill--bl">
-              <span class="float-pill__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </span>
-              LGPD
-            </span>
-            <span class="float-pill float-pill--br">
-              <span class="float-pill__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-              </span>
-              OTA
-            </span>
           </div>
-        </div>
+
+          <span class="float-pill float-pill--p1">
+            <span class="float-pill__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            &lt;100 ms
+          </span>
+          <span class="float-pill float-pill--p2">
+            <span class="float-pill__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </span>
+            Offline
+          </span>
+          <span class="float-pill float-pill--p3">
+            <span class="float-pill__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            LGPD
+          </span>
+          <span class="float-pill float-pill--p4">
+            <span class="float-pill__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            </span>
+            OTA
+          </span>
+
+          <h2 class="hero-product-headline">Transforme dispositivos em agentes <span class="accent">inteligentes</span></h2>
+          <p class="hero-product-sub">Inferência local, latência baixa e LGPD por design — sem nuvem obrigatória.</p>
+        </article>
+
       </div>
     </section>
 

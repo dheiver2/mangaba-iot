@@ -4,9 +4,12 @@
    ========================================================= */
 
 :root {
-  --background: 42 45% 96%;      /* #FAF6EC creme + leve calor */
-  --foreground: 30 6% 12%;
-  --card: 0 0% 100%;
+  /* Foundation: dark navy stage + warm cream cards (referência) */
+  --stage:        220 18% 9%;    /* #131720 fundo navy escuro */
+  --stage-soft:   220 14% 14%;   /* footer / nav adaptado */
+  --background:   45 50% 96%;    /* #FBF7EE creme dos stage cards */
+  --foreground:   30 6% 12%;
+  --card:         0 0% 100%;     /* cards internos brancos */
   --card-foreground: 30 6% 12%;
   --primary: 16 61% 60%;
   --primary-foreground: 0 0% 100%;
@@ -36,9 +39,11 @@
 }
 
 html.dark {
-  --background: 30 5% 13%;       /* #221F1D charcoal quente */
-  --foreground: 44 30% 95%;
-  --card: 30 5% 16%;
+  --stage:        220 16% 7%;
+  --stage-soft:   220 14% 12%;
+  --background:   30 5% 16%;     /* stage card no dark vira charcoal */
+  --foreground:   44 30% 95%;
+  --card:         30 5% 19%;
   --card-foreground: 44 30% 95%;
   --primary: 16 61% 60%;
   --primary-foreground: 0 0% 100%;
@@ -62,26 +67,11 @@ body {
   font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 15px;
   line-height: 1.55;
-  background: hsl(var(--background));
+  background: hsl(var(--stage));         /* fundo navy escuro */
   color: hsl(var(--foreground));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
-}
-
-/* Padrão de pontos sutil no background (referência do guideline) */
-body::before {
-  content: "";
-  position: fixed; inset: 0;
-  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.045) 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-position: 0 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.65;
-}
-html.dark body::before {
-  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.06) 1px, transparent 1px);
 }
 
 main, header, footer { position: relative; z-index: 1; }
@@ -119,11 +109,26 @@ code, kbd, samp { font-family: 'JetBrains Mono', 'Fira Code', Menlo, monospace; 
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
-  background: hsl(var(--background) / 0.82);
+  background: hsl(var(--stage) / 0.82);
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+  color: hsl(var(--background));
 }
-.nav.is-scrolled { border-bottom-color: hsl(var(--border)); }
+.nav.is-scrolled { border-bottom-color: hsl(var(--stage-soft)); }
+.nav .brand__name { color: hsl(var(--background)); }
+.nav__links a { color: hsl(var(--background) / 0.65); }
+.nav__links a:hover { color: hsl(var(--background)); }
+.nav .theme-toggle {
+  background: hsl(var(--stage-soft));
+  border-color: hsl(var(--background) / 0.1);
+  color: hsl(var(--background) / 0.75);
+}
+.nav .theme-toggle:hover { background: hsl(var(--background) / 0.1); color: hsl(var(--background)); }
+.nav .btn--primary {
+  background: hsl(var(--background));
+  color: hsl(var(--stage));
+}
+.nav .btn--primary:hover { background: hsl(var(--background) / 0.9); color: hsl(var(--stage)); }
 
 .nav__inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -218,9 +223,174 @@ html.dark .theme-toggle .icon-sun { display: inline; }
 html.dark .theme-toggle .icon-moon { display: none; }
 
 /* =========================================================
-   HERO
+   HERO — mosaico de 3 stage cards (réplica do guideline)
    ========================================================= */
-.hero { padding: 80px 0 64px; position: relative; overflow: visible; }
+.hero {
+  margin: 14px auto 14px;
+  max-width: 1320px;
+  padding: 18px;
+  position: relative;
+}
+.hero__mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1.05fr;
+  gap: 16px;
+  align-items: stretch;
+}
+@media (max-width: 1080px) {
+  .hero__mosaic { grid-template-columns: 1fr 1fr; }
+  .hero-card--product { grid-column: span 2; }
+}
+@media (max-width: 720px) {
+  .hero__mosaic { grid-template-columns: 1fr; }
+  .hero-card--product { grid-column: span 1; }
+}
+
+.hero-card {
+  position: relative;
+  background: hsl(var(--background));
+  border-radius: 24px;
+  padding: 32px 30px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.hero-card::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: 0;
+}
+.hero-card > * { position: relative; z-index: 1; }
+
+/* --- Card 1: copy + CTAs --- */
+.hero-card--copy {
+  background: hsl(var(--background));
+}
+.hero-card--copy h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(32px, 3.4vw, 46px);
+  font-weight: 800; letter-spacing: -0.028em; line-height: 1.05;
+  margin: 18px 0 16px;
+  color: hsl(var(--foreground));
+}
+.hero-card--copy h1 .accent { color: var(--orange); }
+.hero-card--copy .hero__sub {
+  font-size: 15.5px; line-height: 1.6;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 24px; max-width: none;
+}
+.hero-card--copy .hero__ctas {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 16px; justify-content: flex-start;
+}
+.hero-card--copy .hero__micro {
+  font-size: 12.5px; color: hsl(var(--muted-foreground));
+  margin-top: auto; padding-top: 12px; text-align: left;
+}
+
+/* --- Card 2: brand visual (logo gigante sobre peach) --- */
+.hero-card--brand {
+  background:
+    radial-gradient(circle at 70% 80%, rgba(255, 178, 120, 0.4), transparent 65%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, #F8E8D2 100%);
+  align-items: center; justify-content: center;
+  min-height: 380px;
+  text-align: center;
+  gap: 20px;
+}
+.hero-card--brand .hero-brand-lockup {
+  display: inline-flex; align-items: center; gap: 14px;
+}
+.hero-card--brand .hero-brand-lockup svg {
+  width: clamp(56px, 6vw, 80px);
+  height: clamp(56px, 6vw, 80px);
+}
+.hero-card--brand .hero-brand-wordmark {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 5.6vw, 70px);
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: hsl(var(--foreground));
+}
+.hero-card--brand .hero-brand-wordmark .dot,
+.hero-card--brand .hero-brand-wordmark .suf { color: var(--orange); }
+.hero-card--brand .hero-brand-tagline {
+  font-size: 14.5px; font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  max-width: 320px;
+}
+
+/* --- Card 3: produto + pills --- */
+.hero-card--product {
+  background:
+    linear-gradient(180deg, hsl(var(--background)) 0%, #FFE9C6 100%);
+  overflow: visible;
+  padding: 26px 24px 28px;
+}
+.hero-card--product::before { opacity: 0.55; }
+.hero-card--product .hero-product-img {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: hsl(var(--muted));
+  min-height: 240px;
+  margin-bottom: 16px;
+}
+.hero-card--product .hero-product-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero-card--product .hero-product-img::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25));
+}
+.hero-card--product .hero-status-card {
+  position: absolute; left: 14px; bottom: 14px; right: 14px;
+  background: hsl(var(--card) / 0.96);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(var(--border));
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex; align-items: center; gap: 10px;
+  z-index: 2;
+}
+.hero-card--product .hero-status-card .pulse {
+  width: 7px; height: 7px; border-radius: 999px; flex: 0 0 7px;
+  background: #10B981;
+  animation: pulse-dot 1.4s var(--ease) infinite;
+}
+.hero-card--product .hero-status-card .st-title { font-size: 12.5px; font-weight: 700; }
+.hero-card--product .hero-status-card .st-sub { font-size: 11.5px; color: hsl(var(--muted-foreground)); }
+
+.hero-card--product .hero-product-headline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 800; letter-spacing: -0.01em; line-height: 1.25;
+  margin-bottom: 6px;
+}
+.hero-card--product .hero-product-headline .accent { color: var(--orange); }
+.hero-card--product .hero-product-sub {
+  font-size: 12.5px; color: hsl(var(--muted-foreground)); line-height: 1.5;
+}
+
+/* Floating pills no card de produto */
+.hero-card--product .float-pill { animation: float-in 0.6s var(--ease) both; }
+.hero-card--product .float-pill--p1 { top: 56px; right: -16px; animation-delay: 0.05s; }
+.hero-card--product .float-pill--p2 { top: 130px; left: -18px; animation-delay: 0.15s; }
+.hero-card--product .float-pill--p3 { top: 200px; right: -20px; animation-delay: 0.25s; }
+.hero-card--product .float-pill--p4 { bottom: 110px; left: -10px; animation-delay: 0.35s; }
+@media (max-width: 720px) {
+  .hero-card--product .float-pill--p1 { right: -8px; }
+  .hero-card--product .float-pill--p2 { left: -8px; }
+  .hero-card--product .float-pill--p3 { right: -8px; }
+  .hero-card--product .float-pill--p4 { left: -8px; }
+}
+
+/* Mantém base .hero antiga para compatibilidade interna */
 .hero__inner { max-width: 1180px; margin: 0 auto; text-align: center; }
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -367,13 +537,17 @@ html.dark .theme-toggle .icon-moon { display: none; }
    STATS / CLIENTES / MODELS
    ========================================================= */
 .stats {
-  background: hsl(var(--card)); border-top: 1px solid hsl(var(--border));
-  border-bottom: 1px solid hsl(var(--border));
-  border-radius: 0;
+  position: relative;
+  margin: 14px auto;
+  max-width: 1320px;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 22px;
+  padding: 0 24px;
 }
 .stats__grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  padding: 30px 0;
+  padding: 26px 0;
 }
 .stats__cell {
   padding: 8px 24px; text-align: center;
@@ -397,9 +571,11 @@ html.dark .theme-toggle .icon-moon { display: none; }
 }
 
 .clients {
-  padding: 30px 0;
-  background: hsl(var(--muted) / 0.4);
-  border-bottom: 1px solid hsl(var(--border));
+  margin: 14px auto;
+  max-width: 1320px;
+  padding: 28px 24px;
+  background: hsl(var(--background));
+  border-radius: 22px;
 }
 .clients__label {
   font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -419,10 +595,11 @@ html.dark .theme-toggle .icon-moon { display: none; }
 .client-pill svg { width: 14px; height: 14px; color: var(--orange-dark); }
 
 .models {
-  padding: 36px 0;
-  background: hsl(var(--muted) / 0.55);
-  border-top: 1px solid hsl(var(--border));
-  border-bottom: 1px solid hsl(var(--border));
+  margin: 14px auto;
+  max-width: 1320px;
+  padding: 32px 24px;
+  background: hsl(var(--background));
+  border-radius: 22px;
 }
 .models__label {
   font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -443,10 +620,46 @@ html.dark .theme-toggle .icon-moon { display: none; }
 .model-chip .dot-sm { width: 5px; height: 5px; border-radius: 999px; background: var(--orange); }
 
 /* =========================================================
-   SECTIONS / FEATURES / CARDS
+   SECTIONS = STAGE CARDS (creme sobre fundo navy escuro)
    ========================================================= */
-.section { padding: 88px 0; position: relative; }
-.section--alt { background: hsl(var(--muted) / 0.4); }
+.section {
+  position: relative;
+  margin: 14px auto;
+  max-width: 1320px;
+  padding: 72px 32px;
+  background: hsl(var(--background));
+  border-radius: 28px;
+  color: hsl(var(--foreground));
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, hsl(var(--foreground) / 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: 0;
+}
+.section > * { position: relative; z-index: 1; }
+.section .container { padding: 0 12px; }
+
+/* Variação "peach": gradiente quente nos cards de momento (CTA, casos) */
+.section--alt {
+  background:
+    radial-gradient(circle at 80% 100%, rgba(255, 178, 120, 0.28), transparent 60%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, #FBEED5 100%);
+}
+html.dark .section--alt {
+  background:
+    radial-gradient(circle at 80% 100%, rgba(217, 119, 87, 0.18), transparent 60%),
+    hsl(var(--background));
+}
+
+@media (max-width: 720px) {
+  .section { padding: 48px 20px; margin: 10px; border-radius: 22px; }
+  .section .container { padding: 0; }
+}
 
 .section__head { max-width: 720px; margin: 0 auto 52px; text-align: center; }
 .section__eyebrow {
@@ -786,15 +999,20 @@ html.dark .theme-toggle .icon-moon { display: none; }
 }
 .cta-final .btn--ghost:hover { background: rgba(255,255,255,0.12); color: #fff; }
 
-.footer { padding: 52px 0 64px; border-top: 1px solid hsl(var(--border)); }
+.footer {
+  padding: 52px 0 64px;
+  background: hsl(var(--stage));
+  color: hsl(var(--background));
+}
 .footer__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 24px; }
 .footer__brand { display: flex; align-items: center; gap: 10px; }
+.footer__brand .brand__name { color: hsl(var(--background)); }
 .footer__links { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13.5px; font-weight: 500; }
-.footer__links a { color: hsl(var(--muted-foreground)); }
-.footer__links a:hover { color: hsl(var(--foreground)); }
+.footer__links a { color: hsl(var(--background) / 0.6); }
+.footer__links a:hover { color: hsl(var(--background)); }
 .footer__legal {
-  margin-top: 28px; padding-top: 20px; border-top: 1px solid hsl(var(--border));
-  font-size: 12px; color: hsl(var(--muted-foreground)); line-height: 1.65;
+  margin-top: 28px; padding-top: 20px; border-top: 1px solid hsl(var(--background) / 0.12);
+  font-size: 12px; color: hsl(var(--background) / 0.55); line-height: 1.65;
 }
 
 /* =========================================================
