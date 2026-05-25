@@ -1,14 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Folha -->
-  <path d="M 32 16 C 24 8, 14 11, 15 18 C 16 23, 26 23, 33 18 Z" fill="#7DA84A"/>
-  <!-- Nervura central da folha -->
-  <path d="M 17 16 Q 24 16, 31 18" stroke="#5A8235" stroke-width="0.8" fill="none" stroke-linecap="round"/>
-  <!-- Pedúnculo / cabinho -->
-  <rect x="30.5" y="12" width="2.5" height="6" rx="1" fill="#5C3A24"/>
-  <!-- Fruto -->
-  <circle cx="32" cy="40" r="22" fill="#DD7B4E"/>
-  <!-- Sombra interna inferior -->
-  <ellipse cx="32" cy="48" rx="18" ry="10" fill="#B85838" opacity="0.22"/>
-  <!-- Brilho/highlight superior esquerdo -->
-  <ellipse cx="24" cy="30" rx="6" ry="4" fill="#FFFFFF" opacity="0.24" transform="rotate(-22 24 30)"/>
+  <defs>
+    <radialGradient id="mango" cx="38%" cy="32%" r="78%">
+      <stop offset="0%" stop-color="#FFE38A"/>
+      <stop offset="38%" stop-color="#F8B765"/>
+      <stop offset="72%" stop-color="#E08846"/>
+      <stop offset="100%" stop-color="#9E4A1F"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="20%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#7DA84A"/>
+      <stop offset="100%" stop-color="#3F6720"/>
+    </linearGradient>
+  </defs>
+  <!-- Folha pequena -->
+  <path d="M 30 13 C 24 5, 16 9, 18 16 C 20 21, 28 19, 30 13 Z" fill="url(#leaf)"/>
+  <!-- Fruta (forma de manga / ovo) -->
+  <path d="M 32 14
+           C 19 14, 11 25, 11 38
+           C 11 52, 20 60, 32 60
+           C 44 60, 53 52, 53 38
+           C 53 25, 45 14, 32 14 Z"
+        fill="url(#mango)"/>
+  <!-- Brilho superior esquerdo -->
+  <ellipse cx="23" cy="28" rx="7" ry="4.5" fill="#FFFFFF" opacity="0.35" transform="rotate(-22 23 28)"/>
 </svg>
