@@ -78,7 +78,7 @@
 }
 .sc-palette span { flex: 1; display: block; }
 .sc-palette .pl-green  { background: #7DA84A; }
-.sc-palette .pl-orange { background: #D97757; }
+.sc-palette .pl-orange { background: #EF7A1E; }
 .sc-palette .pl-amber  { background: #F5A55A; }
 .sc-palette .pl-yellow { background: #FFD66B; }
 
@@ -110,7 +110,7 @@
   line-height: 1;
   color: #1F1E1D;
 }
-.sc-logo-wordmark .dot, .sc-logo-wordmark .suf { color: #D97757; }
+.sc-logo-wordmark .dot, .sc-logo-wordmark .suf { color: #EF7A1E; }
 
 /* ---- Card 3: Mockup do produto ---- */
 .sc-card--product {
@@ -127,7 +127,7 @@
   font-family: 'Open Sans', sans-serif; font-weight: 800; font-size: 14px;
   z-index: 2;
 }
-.sc-card--product .sc-brand-mini .dot, .sc-card--product .sc-brand-mini .suf { color: #D97757; }
+.sc-card--product .sc-brand-mini .dot, .sc-card--product .sc-brand-mini .suf { color: #EF7A1E; }
 
 .sc-portrait {
   flex: 1; min-height: 280px;
@@ -159,7 +159,7 @@
   width: 22px; height: 22px;
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 999px;
-  background: #D97757; color: #fff;
+  background: #EF7A1E; color: #fff;
   font-size: 10px;
 }
 .sc-pill__icon svg { width: 12px; height: 12px; }
@@ -180,7 +180,7 @@
   font-weight: 800; line-height: 1.2; letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
-.sc-headline .accent { color: #D97757; }
+.sc-headline .accent { color: #EF7A1E; }
 .sc-headline-sub {
   font-size: 12.5px; color: #5A5550; line-height: 1.5; max-width: 340px; margin: 0 auto;
 }
@@ -278,7 +278,7 @@
 }
 .logo-tile--light { background: #FBF7EE; color: #1F1E1D; }
 .logo-tile--dark { background: #1A1815; color: #FBF7EE; }
-.logo-tile--orange { background: #D97757; color: #fff; border-color: transparent; }
+.logo-tile--orange { background: #EF7A1E; color: #fff; border-color: transparent; }
 .logo-tile--mono { background: hsl(var(--card)); color: hsl(var(--foreground)); }
 .logo-tile__caption {
   font-family: 'JetBrains Mono', monospace; font-size: 11px;
@@ -288,7 +288,7 @@
   font-family: 'Open Sans', sans-serif; font-weight: 800;
   font-size: 28px; letter-spacing: -0.025em;
 }
-.logo-tile .word .dot, .logo-tile .word .suf { color: #D97757; }
+.logo-tile .word .dot, .logo-tile .word .suf { color: #EF7A1E; }
 .logo-tile--dark .word .dot, .logo-tile--dark .word .suf { color: #FFB57A; }
 .logo-tile--orange .word .dot, .logo-tile--orange .word .suf { color: #FFF; }
 
