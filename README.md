@@ -47,3 +47,4 @@ Para usar domínio próprio, adicione um arquivo `CNAME` na raiz com o host (ex.
 ---
 
 © 2026 Mangaba.
+
