@@ -38,14 +38,14 @@
   padding: 26px;
   position: relative;
   overflow: hidden;
-  background: #FFFCF0;
-  color: #403731;
+  background: #FFF8F5;
+  color: #1E0D01;
   display: flex; flex-direction: column;
 }
 
 /* ---- Card 1: Tipografia + Cores ---- */
 .sc-card--specs {
-  background: #FFFCF0;
+  background: #FFF8F5;
   background-image: radial-gradient(circle, rgba(31,30,29,0.05) 1px, transparent 1px);
   background-size: 18px 18px;
 }
@@ -55,7 +55,7 @@
   border: 1px solid rgba(31,30,29,0.08);
   padding: 6px 14px; border-radius: 999px;
   font-size: 12.5px; font-weight: 600;
-  color: #403731;
+  color: #1E0D01;
 }
 .sc-display {
   font-family: 'Open Sans', sans-serif;
@@ -78,19 +78,19 @@
 }
 .sc-palette span { flex: 1; display: block; }
 .sc-palette .pl-green  { background: #7BBF26; }
-.sc-palette .pl-orange { background: #E94A12; }
-.sc-palette .pl-amber  { background: #FF7A1A; }
+.sc-palette .pl-orange { background: #F97518; }
+.sc-palette .pl-amber  { background: #FF9C24; }
 .sc-palette .pl-yellow { background: #FFD83D; }
 
 /* ---- Card 2: Logo gigante ---- */
 .sc-card--logo {
   background:
     radial-gradient(circle at 70% 80%, rgba(255, 178, 120, 0.35), transparent 65%),
-    linear-gradient(180deg, #FFFCF0 0%, #FFDFCC 100%);
+    linear-gradient(180deg, #FFF8F5 0%, #FFDAC2 100%);
   background-image:
     radial-gradient(circle, rgba(31,30,29,0.04) 1px, transparent 1px),
     radial-gradient(circle at 70% 80%, rgba(255, 178, 120, 0.4), transparent 65%),
-    linear-gradient(180deg, #FFFCF0 0%, #FFDFCC 100%);
+    linear-gradient(180deg, #FFF8F5 0%, #FFDAC2 100%);
   background-size: 22px 22px, auto, auto;
   display: flex; align-items: center; justify-content: center;
   min-height: 360px;
@@ -108,15 +108,15 @@
   font-size: clamp(44px, 7vw, 84px);
   letter-spacing: -0.035em;
   line-height: 1;
-  color: #403731;
+  color: #1E0D01;
 }
-.sc-logo-wordmark .dot, .sc-logo-wordmark .suf { color: #E94A12; }
+.sc-logo-wordmark .dot, .sc-logo-wordmark .suf { color: #F97518; }
 
 /* ---- Card 3: Mockup do produto ---- */
 .sc-card--product {
   background:
-    linear-gradient(180deg, #FFFCF0 0%, #FFDFCC 100%);
-  color: #403731;
+    linear-gradient(180deg, #FFF8F5 0%, #FFDAC2 100%);
+  color: #1E0D01;
   position: relative;
   overflow: visible;
   display: flex; flex-direction: column;
@@ -127,14 +127,14 @@
   font-family: 'Open Sans', sans-serif; font-weight: 800; font-size: 14px;
   z-index: 2;
 }
-.sc-card--product .sc-brand-mini .dot, .sc-card--product .sc-brand-mini .suf { color: #E94A12; }
+.sc-card--product .sc-brand-mini .dot, .sc-card--product .sc-brand-mini .suf { color: #F97518; }
 
 .sc-portrait {
   flex: 1; min-height: 280px;
   margin: 56px -2px 0;
   border-radius: 18px; overflow: hidden;
   position: relative;
-  background: #FFDFCC;
+  background: #FFDAC2;
 }
 .sc-portrait img {
   width: 100%; height: 100%; object-fit: cover; display: block;
@@ -152,14 +152,14 @@
   border-radius: 999px;
   padding: 8px 14px 8px 8px;
   font-size: 12.5px; font-weight: 700;
-  color: #403731;
+  color: #1E0D01;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 .sc-pill__icon {
   width: 22px; height: 22px;
   display: inline-flex; align-items: center; justify-content: center;
   border-radius: 999px;
-  background: #E94A12; color: #fff;
+  background: #F97518; color: #fff;
   font-size: 10px;
 }
 .sc-pill__icon svg { width: 12px; height: 12px; }
@@ -180,7 +180,7 @@
   font-weight: 800; line-height: 1.2; letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
-.sc-headline .accent { color: #E94A12; }
+.sc-headline .accent { color: #F97518; }
 .sc-headline-sub {
   font-size: 12.5px; color: #5A5550; line-height: 1.5; max-width: 340px; margin: 0 auto;
 }
@@ -276,9 +276,9 @@
   gap: 14px; min-height: 180px;
   box-shadow: var(--shadow-soft);
 }
-.logo-tile--light { background: #FFFCF0; color: #403731; }
-.logo-tile--dark { background: #1A1815; color: #FFFCF0; }
-.logo-tile--orange { background: #E94A12; color: #fff; border-color: transparent; }
+.logo-tile--light { background: #FFF8F5; color: #1E0D01; }
+.logo-tile--dark { background: #1A1815; color: #FFF8F5; }
+.logo-tile--orange { background: #F97518; color: #fff; border-color: transparent; }
 .logo-tile--mono { background: hsl(var(--card)); color: hsl(var(--foreground)); }
 .logo-tile__caption {
   font-family: 'JetBrains Mono', monospace; font-size: 11px;
@@ -288,7 +288,7 @@
   font-family: 'Open Sans', sans-serif; font-weight: 800;
   font-size: 28px; letter-spacing: -0.025em;
 }
-.logo-tile .word .dot, .logo-tile .word .suf { color: #E94A12; }
+.logo-tile .word .dot, .logo-tile .word .suf { color: #F97518; }
 .logo-tile--dark .word .dot, .logo-tile--dark .word .suf { color: #FFB57A; }
 .logo-tile--orange .word .dot, .logo-tile--orange .word .suf { color: #FFF; }
 
